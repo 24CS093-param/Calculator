@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body bgcolor="light blue">
+    <h1><b>Simple Counter</b></h1>
+    <button id="display">0</button><br>
+
+  
+    <button id="add1">+1</button>
+      <button id="add5">+5</button>
+      <button id="sub1">-1</button>
+      <button id="sub5">-5</button>
+      <button id="mul2">*2</button>
+      <button id="div2">/2</button>
+      <button id="resetvalue">Reset</button>
+
+      <script>
+         let counter = 0;
+
+          function updateDisplay() {
+            console.log(counter);
+      document.getElementById("display").innerText = counter;
+    }
+   
+      function add1() {
+      counter ++;
+      updateDisplay();
+      console.log(counter);
+    }
+
+    function add5() {
+      counter ++;
+      counter ++;
+      counter ++;
+      counter ++;
+      counter ++;
+      
+      updateDisplay();
+      console.log(counter);
+    }
+
+    function minus1() {
+      counter --;
+      updateDisplay();
+      console.log(counter);
+    }
+    function minus5() {
+      counter --;
+      counter --;
+      counter --;
+      counter --;
+      counter --;
+      updateDisplay();
+      console.log(counter);
+    }
+
+     function mul2() {
+      counter *= 2;
+      updateDisplay();
+      console.log(counter);
+    }
+
+     function div2(){
+        counter/=2;
+        updateDisplay();
+        console.log(counter);
+     } 
+
+     function resetvalue(){
+        counter = 0;
+        updateDisplay();
+        console.log(counter);
+     }
+    
+
+    
+      document.getElementById("add1").addEventListener('click',add1);
+      document.getElementById("add5").addEventListener('click',add5);  
+     document.getElementById("sub1").addEventListener('click',minus1);
+     document.getElementById("sub5").addEventListener('click',minus5);
+     document.getElementById("mul2").addEventListener('click',mul2);
+     document.getElementById("div2").addEventListener('click',div2);
+     document.getElementById("resetvalue").addEventListener('click',resetvalue);
+      </script>
+
+<style>
+      body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  color: rgb(255, 250, 250);
+}
+
+button {
+  margin: 20px;
+  padding: 10px 15px;
+  font-size: 20px;
+  background: #fb0909;
+}
+
+#display {
+  font-size: 50px;
+  color: #c0fb00d9;
+}
+
+#add1 {
+  background-color: rgb(2, 148, 2);
+  color: white;
+}
+
+#add5 {
+  background-color: rgb(5, 239, 5);
+  color: white;
+}
+
+#sub1 {
+  background-color: rgb(142, 91, 16);
+  color: white;
+}
+
+#sub5 {
+  background-color: rgb(12, 181, 172);
+  color: white;
+}
+
+#mul2 {
+  background-color: rgb(82, 21, 162);
+  color: white;
+}
+
+#div2 {
+  background-color: rgb(7, 7, 134);
+  color: white;
+}
+
+#resetvalue {
+  background-color: gray;
+  color: white;
+}
+@media (max-width: 768px) {
+  .flex-container div {
+    flex: 1 1 100%;
+  }
+}
+
+
+</style>
+</body>
+</html>
